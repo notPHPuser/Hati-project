@@ -24,8 +24,6 @@ function Create() {
 
   function ifSale() {
     setSale(!sale);
-    document.getElementById();
-    document.getElementById();
     document.getElementById('create_sale').classList.add('deal_add');
     document.getElementById('create_arenda').classList.remove('deal_add');
   }
