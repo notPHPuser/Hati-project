@@ -1,0 +1,10 @@
+.create_myself_page {
+  position: absolute;
+  left: 100px;
+  z-index: -1;
+}
+
+.create_myself_page_p {
+  font-size: 25px;
+  font-weight: 700;
+}

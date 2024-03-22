@@ -107,8 +107,10 @@
   position: absolute;
 }
 
-.wqe {
+.sale_announcement {
   position: absolute;
+  left: 40px;
+  top: 165px;
 }
 
 .longArenda {
@@ -174,6 +176,27 @@
 }
 
 .day_option:focus {
+  border: 2px solid var(--main-hover);
+  background-color: #f3f6ff;
+}
+
+.sale_choice_menu {
+  background-color: inherit;
+  border: 0.2px solid #4a5a81;
+  position: relative;
+  margin-left: 10px;
+  height: 35px;
+  width: 160px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-radius: 3px;
+  left: -10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.sale_choice_menu:focus {
   border: 2px solid var(--main-hover);
   background-color: #f3f6ff;
 }

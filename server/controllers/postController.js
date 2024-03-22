@@ -1,9 +1,8 @@
-const { Post } = require('../models/post');
+const { Post, Apartment } = require('../models/post');
 
 class PostController {
   async addPost(req, res) {
     const { login, password, email, body } = req.body;
-
     const post = await Post.create({ login, password, email });
     return res.json(post);
   }

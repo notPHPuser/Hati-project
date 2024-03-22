@@ -19,7 +19,7 @@ function Create() {
   function ifLong() {
     setLong(!long);
     document.getElementById('long_arenda').classList.add('deal_add');
-    document.getElementById('day_arenda').classList.remove('deal_add');
+    // document.getElementById('day_arenda').classList.remove('deal_add');
   }
 
   function ifSale() {
@@ -88,7 +88,18 @@ function Create() {
           Продажа
         </button>
 
-        {sale && <div className='wqe'>wqe</div>}
+        {sale && (
+          <div className='sale_announcement'>
+            <p>Жилая недвижемость</p>
+            <button className='sale_choice_menu'>Квартира</button>
+            <button className='sale_choice_menu'>Квартира в новосройке</button>
+            <button className='sale_choice_menu'>Коттедж</button>
+            <p>Коммерческая</p>
+            <button className='long_options'>Офис</button>
+            <button className='long_options'>Здание</button>
+            <button className='long_options'>Склад</button>
+          </div>
+        )}
         <Link to='/create_own' className='create_myself'>
           Создать самому
         </Link>

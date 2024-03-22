@@ -6,7 +6,9 @@ function CreateMyself() {
   return (
     <>
       <Header />
-      <div className='wqe'></div>
+      <div className='create_myself_page'>
+        <p className='create_myself_page_p'>Самостоятельное создание анкеты</p>
+      </div>
     </>
   );
 }
