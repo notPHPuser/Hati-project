@@ -1,0 +1,10 @@
+.menuBuyFlat {
+  z-index: -1;
+  position: absolute;
+  left: 80px;
+}
+
+.pMenuBuyFlat {
+  font-size: 30px;
+  font-weight: 900;
+}

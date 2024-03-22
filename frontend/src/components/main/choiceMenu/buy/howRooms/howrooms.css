@@ -1,0 +1,29 @@
+.rooms {
+  position: absolute;
+  top: 100px;
+  width: 250px;
+  z-index: 1;
+  height: 100px;
+  background-color: white;
+  left: 300px;
+  color: black;
+  border-radius: 10px;
+  cursor: auto;
+}
+
+.count-rooms {
+  position: relative;
+  margin-right: 5px;
+  height: 35px;
+  width: 35px;
+  border-radius: 7px;
+  background-color: inherit;
+  border: 1px solid grey;
+  top: 20px;
+  left: 10px;
+  cursor: pointer;
+}
+
+.change-rooms-color {
+  background-color: blue;
+}

@@ -1,0 +1,153 @@
+:root {
+  --size: 17px;
+}
+
+.hidden-arenda {
+  position: absolute;
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  top: 53px;
+  left: -170px;
+  width: 1536px;
+  border-top: 0.5px solid grey;
+  overflow: hidden;
+  height: 400px;
+}
+
+.grid-one {
+  display: grid;
+  position: relative;
+  top: 50px;
+  left: 170px;
+}
+.long-arenda {
+  position: relative;
+  top: -5px;
+  width: 250px;
+  text-decoration: none;
+  transition: 0.2s ease;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.long-arenda:hover {
+  color: var(--main-hover);
+}
+
+.apartments {
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s ease;
+  font-size: var(--size);
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.apartments:hover {
+  color: var(--main-hover);
+}
+
+.rooms {
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s ease;
+  top: 10px;
+  font-size: var(--size);
+  width: 75px;
+  margin-bottom: 10px;
+}
+
+.rooms:hover {
+  color: var(--main-hover);
+}
+
+.houses {
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s ease;
+  top: 20px;
+  font-size: var(--size);
+  width: 138px;
+  margin-bottom: 10px;
+}
+
+.houses:hover {
+  color: var(--main-hover);
+}
+.rent {
+  position: relative;
+  top: 17px;
+  width: 210px;
+  font-size: 22px;
+  top: 30px;
+  margin-bottom: 10px;
+}
+
+.rent:hover {
+  color: var(--main-hover);
+}
+
+.pass {
+  position: relative;
+  top: 40px;
+  font-size: 22px;
+  width: 30px;
+}
+
+.pass:hover {
+  color: var(--main-hover);
+}
+
+.grid-two {
+  display: grid;
+  position: absolute;
+  top: 28px;
+  left: 650px;
+}
+
+.help {
+  font-size: 22px;
+}
+
+.book-photo {
+  position: absolute;
+  width: 35px;
+  top: 20px;
+  left: -40px;
+}
+
+.how {
+  position: relative;
+  top: -10px;
+  left: -37px;
+  transition: 0.2s ease;
+}
+
+.how:hover {
+  color: var(--main-hover);
+}
+
+.how-two {
+  position: relative;
+  top: 0px;
+  left: -37px;
+  transition: 0.2s ease;
+}
+
+.how-two:hover {
+  color: var(--main-hover);
+}
+
+.houseAndMoney {
+  position: absolute;
+  top: 30px;
+  left: 1050px;
+  width: 300px;
+}
+
+.bottomLinks-arenda {
+  position: absolute;
+  top: 0px;
+  left: 350px;
+}
