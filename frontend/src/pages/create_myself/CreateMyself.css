@@ -8,3 +8,46 @@
   font-size: 25px;
   font-weight: 700;
 }
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.option_create_my_self {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100px;
+  height: 20px;
+  border-radius: 7px;
+}
+.if_create_myself {
+  position: absolute;
+  width: 1330px;
+  height: 500px;
+  box-shadow: 0px 0px 28px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.form_for_myself {
+  position: absolute;
+  left: 50px;
+  top: 20px;
+}
+
+.if_radio_arenda {
+  position: absolute;
+  top: 100px;
+}
+
+.select_radio_arenda {
+  width: 100px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+}
