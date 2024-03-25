@@ -1,4 +1,4 @@
-const { Post, Apartment } = require('../models/post');
+const { Post } = require('../models/post');
 
 class PostController {
   async addPost(req, res) {
