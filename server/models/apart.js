@@ -11,7 +11,6 @@ const Apartment = sequelize.define('apartment', {
   square: { type: DataTypes.INTEGER },
   squareLiving: { type: DataTypes.INTEGER },
   squareKitchen: { type: DataTypes.INTEGER },
-  kitchen: { type: DataTypes.INTEGER },
   floor: { type: DataTypes.INTEGER },
   Bathroom: { type: DataTypes.STRING },
 });

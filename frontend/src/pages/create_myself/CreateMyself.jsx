@@ -12,7 +12,7 @@ function CreateMyself() {
   const [photo, setPhoto] = useState('');
   const [type, setType] = useState('');
   const [square, setSquare] = useState('');
-  const [kitchen, setKitchen] = useState('');
+  // const [kitchen, setKitchen] = useState('');
   const [Bathroom, setBathroom] = useState('');
   const [squareLiving, setSquareLiving] = useState('');
   const [squareKitchen, setSquareKitchen] = useState('');
@@ -27,7 +27,7 @@ function CreateMyself() {
         photo,
         type,
         square,
-        kitchen,
+        // kitchen,
         Bathroom,
         squareLiving,
         squareKitchen,
@@ -40,7 +40,7 @@ function CreateMyself() {
       setPhoto('');
       setType('');
       setSquare('');
-      setKitchen('');
+      // setKitchen('');
       setBathroom('');
       setSquareLiving('');
       setSquareKitchen('');
@@ -64,7 +64,7 @@ function CreateMyself() {
             <p>Выберете функционал</p>
             <div>
               <input onClick={ifRadioSale} type='radio' name='create_mySelf' />
-              <label>Продажа</label>
+              <label className='label_create_myself'>Продажа</label>
               {radioSale && (
                 <div className='if_radio_sale'>
                   <p>Колличество комнат</p>
@@ -78,13 +78,23 @@ function CreateMyself() {
                     м<sup>2</sup>
                   </p>
                   <p className='living_space'>Жилая площадь</p>
-                  <input required min={0} max={180} className='living_space_sale' type='number' />
+                  <input required min={0} max={150} className='living_space_sale' type='number' />
                   <p className='p_living_radio_sale'>
                     м<sup>2</sup>
                   </p>
                   <p className='p_kitchen_sale'>Кухня</p>
-                  <input required min={0} max={50} type='number' className='kithcen_sale' />
+                  <input required min={0} max={40} type='number' className='kithcen_sale' />
                   <p className='p_kitchen_radio_sale'>
+                    м<sup>2</sup>
+                  </p>
+                  <p className='p_batroom_sale'>Ванная</p>
+                  <input required max={2} min={0} type='number' className='bathroom_sale' />
+                  <p className='p_bathroom_radio_sale'>
+                    м<sup>2</sup>
+                  </p>
+                  <p className='p_floor_sale'>Этаж</p>
+                  <input required min={0} max={50} className='floor_sale' type='number' />
+                  <p className='p_floor_radio_sale'>
                     м<sup>2</sup>
                   </p>
                   {/* <button type='submit'>Создать</button> */}
