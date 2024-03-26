@@ -2,7 +2,20 @@ const { Apartment } = require('../models/apart');
 
 class ApartmentController {
   async addApart(req, res) {
-    const { rooms, price, description, photo, type, square, kitchen, Bathroom, body } = req.body;
+    const {
+      rooms,
+      price,
+      description,
+      photo,
+      type,
+      square,
+      kitchen,
+      Bathroom,
+      squareLiving,
+      squareKitchen,
+      floor,
+      body,
+    } = req.body;
     const apart = await Apartment.create({
       rooms,
       price,
@@ -12,6 +25,9 @@ class ApartmentController {
       square,
       kitchen,
       Bathroom,
+      squareLiving,
+      squareKitchen,
+      floor,
     });
     return res.json(apart);
   }

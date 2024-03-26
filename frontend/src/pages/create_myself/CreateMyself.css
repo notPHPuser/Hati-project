@@ -3,6 +3,12 @@
   left: 100px;
   z-index: -1;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
 
 .create_myself_page_p {
   font-size: 25px;
@@ -25,8 +31,9 @@ select {
 }
 .if_create_myself {
   position: absolute;
-  width: 1330px;
+  width: 950px;
   height: 500px;
+  left: 270px;
   box-shadow: 0px 0px 28px 6px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
@@ -37,17 +44,125 @@ select {
   top: 20px;
 }
 
-.if_radio_arenda {
+.if_radio_sale {
   position: absolute;
   top: 100px;
 }
 
-.select_radio_arenda {
-  width: 100px;
-  height: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border-radius: 5px;
+.rooms_radio_sale {
+  border-radius: 4px;
+  border: 1px solid grey;
+  height: 35px;
+  width: 150px;
+  font-size: 15px;
+  /* transition: 0.1s ease-in-out; */
+}
+
+.rooms_radio_sale:hover {
+  border: 1.4px solid black;
+}
+
+.rooms_radio_sale:focus {
+  border: 2px solid var(--main-hover);
+}
+
+.p_rooms_radio_sale {
+  position: absolute;
+  top: 42px;
+  left: 125px;
+  user-select: none;
+}
+
+.total_area {
+  position: absolute;
+  top: 0px;
+  left: 210px;
+  white-space: nowrap;
+}
+
+.area_radio_sale {
+  position: absolute;
+  border-radius: 4px;
+  border: 1px solid grey;
+  height: 35px;
+  width: 150px;
+  font-size: 15px;
+  left: 210px;
+}
+
+.p_area_radio_sale {
+  position: absolute;
+  top: 42px;
+  left: 336px;
+  user-select: none;
+}
+
+.area_radio_sale:hover {
+  border: 1.4px solid black;
+}
+
+.area_radio_sale:focus {
+  border: 2px solid var(--main-hover);
+}
+
+.living_space {
+  position: absolute;
+  top: 0px;
+  left: 420px;
+  white-space: nowrap;
+}
+
+.living_space_sale {
+  position: absolute;
+  border-radius: 4px;
+  border: 1px solid grey;
+  height: 35px;
+  width: 150px;
+  font-size: 15px;
+  left: 420px;
+}
+
+.p_living_radio_sale {
+  position: absolute;
+  top: 42px;
+  left: 545px;
+  user-select: none;
+}
+
+.living_space_sale:hover {
+  border: 1.4px solid black;
+}
+
+.living_space_sale:focus {
+  border: 2px solid var(--main-hover);
+}
+
+.p_kitchen_sale {
+  position: absolute;
+  top: 0px;
+  left: 630px;
+}
+
+.kithcen_sale {
+  position: absolute;
+  border-radius: 4px;
+  border: 1px solid grey;
+  height: 35px;
+  width: 150px;
+  font-size: 15px;
+  left: 630px;
+}
+
+.kithcen_sale:hover {
+  border: 1.4px solid black;
+}
+
+.kithcen_sale:focus {
+  border: 2px solid var(--main-hover);
+}
+
+.p_kitchen_radio_sale {
+  position: absolute;
+  top: 42px;
+  left: 755px;
 }

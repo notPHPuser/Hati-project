@@ -9,7 +9,10 @@ const Apartment = sequelize.define('apartment', {
   photo: { type: DataTypes.CHAR },
   type: { type: DataTypes.STRING },
   square: { type: DataTypes.INTEGER },
+  squareLiving: { type: DataTypes.INTEGER },
+  squareKitchen: { type: DataTypes.INTEGER },
   kitchen: { type: DataTypes.INTEGER },
+  floor: { type: DataTypes.INTEGER },
   Bathroom: { type: DataTypes.STRING },
 });
 

@@ -9,6 +9,40 @@ function Create() {
   const [sale, setSale] = useState(false);
   const [long, setLong] = useState(false);
   const [arendaDay, setarendaDay] = useState(false);
+  // const [rooms, setRooms] = useState('');
+  // const [price, setPrice] = useState('');
+  // const [description, setDescription] = useState('');
+  // const [photo, setPhoto] = useState('');
+  // const [type, setType] = useState('');
+  // const [square, setSquare] = useState('');
+  // const [kitchen, setKitchen] = useState('');
+  // const [Bathroom, setBathroom] = useState('');
+
+  // const addApart = async () => {
+  //   try {
+  //     await axios.post('http://localhost:5001/api/aparts', {
+  //       rooms,
+  //       price,
+  //       description,
+  //       photo,
+  //       type,
+  //       square,
+  //       kitchen,
+  //       Bathroom,
+  //     });
+
+  //     setRooms('');
+  //     setPrice('');
+  //     setDescription('');
+  //     setPhoto('');
+  //     setType('');
+  //     setSquare('');
+  //     setKitchen('');
+  //     setBathroom('');
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
 
   function ifArenda() {
     setArenda(!arenda);
