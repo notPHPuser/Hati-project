@@ -12,7 +12,6 @@ function CreateMyself() {
   const [photo, setPhoto] = useState('');
   const [type, setType] = useState('');
   const [square, setSquare] = useState('');
-  // const [kitchen, setKitchen] = useState('');
   const [Bathroom, setBathroom] = useState('');
   const [squareLiving, setSquareLiving] = useState('');
   const [squareKitchen, setSquareKitchen] = useState('');
@@ -27,7 +26,6 @@ function CreateMyself() {
         photo,
         type,
         square,
-        // kitchen,
         Bathroom,
         squareLiving,
         squareKitchen,
@@ -40,7 +38,6 @@ function CreateMyself() {
       setPhoto('');
       setType('');
       setSquare('');
-      // setKitchen('');
       setBathroom('');
       setSquareLiving('');
       setSquareKitchen('');
@@ -68,36 +65,107 @@ function CreateMyself() {
               {radioSale && (
                 <div className='if_radio_sale'>
                   <p>Колличество комнат</p>
-                  <input required min={0} max={7} type='number' className='rooms_radio_sale' />
-                  <p className='p_rooms_radio_sale'>
-                    м<sup>2</sup>
-                  </p>
+                  <input
+                    value={rooms}
+                    onChange={(e) => setRooms(e.target.value)}
+                    required
+                    min={1}
+                    max={7}
+                    type='number'
+                    className='rooms_radio_sale'
+                  />
+
                   <p className='total_area'>Общая площадь</p>
-                  <input required min={0} max={200} type='number' className='area_radio_sale' />
+                  <input
+                    value={square}
+                    onChange={(e) => setSquare(e.target.value)}
+                    required
+                    min={1}
+                    max={200}
+                    type='number'
+                    className='area_radio_sale'
+                  />
                   <p className='p_area_radio_sale'>
                     м<sup>2</sup>
                   </p>
                   <p className='living_space'>Жилая площадь</p>
-                  <input required min={0} max={150} className='living_space_sale' type='number' />
+                  <input
+                    value={squareLiving}
+                    onChange={(e) => setSquareLiving(e.target.value)}
+                    required
+                    min={1}
+                    max={150}
+                    className='living_space_sale'
+                    type='number'
+                  />
                   <p className='p_living_radio_sale'>
                     м<sup>2</sup>
                   </p>
                   <p className='p_kitchen_sale'>Кухня</p>
-                  <input required min={0} max={40} type='number' className='kithcen_sale' />
+                  <input
+                    value={squareKitchen}
+                    onChange={(e) => setSquareKitchen(e.target.value)}
+                    required
+                    min={1}
+                    max={40}
+                    type='number'
+                    className='kithcen_sale'
+                  />
                   <p className='p_kitchen_radio_sale'>
                     м<sup>2</sup>
                   </p>
                   <p className='p_batroom_sale'>Ванная</p>
-                  <input required max={2} min={0} type='number' className='bathroom_sale' />
-                  <p className='p_bathroom_radio_sale'>
-                    м<sup>2</sup>
-                  </p>
+                  <input
+                    value={Bathroom}
+                    onChange={(e) => setBathroom(e.target.value)}
+                    required
+                    max={2}
+                    min={1}
+                    type='number'
+                    className='bathroom_sale'
+                  />
+                  <p className='p_bathroom_radio_sale'>кол-во</p>
                   <p className='p_floor_sale'>Этаж</p>
-                  <input required min={0} max={50} className='floor_sale' type='number' />
-                  <p className='p_floor_radio_sale'>
-                    м<sup>2</sup>
-                  </p>
-                  {/* <button type='submit'>Создать</button> */}
+                  <input
+                    value={floor}
+                    onChange={(e) => setFloor(e.target.value)}
+                    required
+                    min={1}
+                    max={50}
+                    className='floor_sale'
+                    type='number'
+                  />
+
+                  <p className='p_price_sale'>Цена</p>
+                  <input
+                    type='number'
+                    required
+                    min={1}
+                    max={500000000}
+                    value={price}
+                    onChange={(e) => setPrice(e.target.value)}
+                    className='price_sale'
+                  />
+                  <p className='p_price_radio_sale'>руб</p>
+                  <p className='p_description_sale'>Описание</p>
+                  <textarea
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
+                    className='description_sale'
+                    required
+                    type='textarea'
+                  />
+                  <p className='p_photo_sale'>Добавьте фото</p>
+                  <input type='file' className='photo_sale' />
+                  <button
+                    value={photo}
+                    required
+                    onChange={(e) => setPhoto(e.target.value)}
+                    className='submit_sale'
+                    type='submit'
+                  >
+                    Создать
+                  </button>
                 </div>
               )}
               {/* <input type='radio' name='create_mySelf' />

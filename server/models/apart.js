@@ -6,7 +6,7 @@ const Apartment = sequelize.define('apartment', {
   rooms: { type: DataTypes.INTEGER },
   price: { type: DataTypes.INTEGER },
   description: { type: DataTypes.STRING },
-  photo: { type: DataTypes.CHAR },
+  photo: { type: DataTypes.BLOB },
   type: { type: DataTypes.STRING },
   square: { type: DataTypes.INTEGER },
   squareLiving: { type: DataTypes.INTEGER },

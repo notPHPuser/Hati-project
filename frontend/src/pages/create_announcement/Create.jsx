@@ -53,7 +53,6 @@ function Create() {
   function ifLong() {
     setLong(!long);
     document.getElementById('long_arenda').classList.add('deal_add');
-    // document.getElementById('day_arenda').classList.remove('deal_add');
   }
 
   function ifSale() {
