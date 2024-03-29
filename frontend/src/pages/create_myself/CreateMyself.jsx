@@ -156,14 +156,14 @@ function CreateMyself() {
                     type='textarea'
                   />
                   <p className='p_photo_sale'>Добавьте фото</p>
-                  <input type='file' className='photo_sale' />
-                  <button
+                  <input
+                    type='file'
+                    className='photo_sale'
                     value={photo}
                     required
                     onChange={(e) => setPhoto(e.target.value)}
-                    className='submit_sale'
-                    type='submit'
-                  >
+                  />
+                  <button className='submit_sale' type='submit'>
                     Создать
                   </button>
                 </div>

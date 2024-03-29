@@ -24,7 +24,7 @@ function ListOfFlats() {
         {apart.map((aparts) => (
           <li key={aparts.id}>
             <p className='sqq'>{aparts.description}</p>
-            <img src={aparts.photo} alt='' />
+            <img src={aparts.photo} />
           </li>
         ))}
       </div>
