@@ -34,11 +34,20 @@
   background-color: inherit;
   font-size: 13px;
 }
+.ForRent:focus {
+  border: 1px solid var(--main-hover);
+}
+
+.ForLive:focus {
+  border: 1px solid var(--main-hover);
+}
 
 .changeForLiveAndRent {
   background-color: #e3e3ff;
+  border: 1px solid var(--main-hover);
+  position: relative;
 
-  box-shadow: 0 0 4px rgb(42, 42, 255);
+  /* box-shadow: 0 0 4px rgb(42, 42, 255); */
 }
 
 .line-one {

@@ -48,23 +48,29 @@ function Create() {
     setArenda(!arenda);
     document.getElementById('create_arenda').classList.add('deal_add');
     document.getElementById('create_sale').classList.remove('deal_add');
+    setSale(false);
   }
 
   function ifLong() {
     setLong(!long);
     document.getElementById('long_arenda').classList.add('deal_add');
+    setarendaDay(false);
   }
 
   function ifSale() {
     setSale(!sale);
     document.getElementById('create_sale').classList.add('deal_add');
     document.getElementById('create_arenda').classList.remove('deal_add');
+    setArenda(false);
+    setLong(false);
+    setarendaDay(false);
   }
 
   function ifArendaDay() {
     setarendaDay(!arendaDay);
     document.getElementById('day_arenda').classList.add('deal_add');
     document.getElementById('long_arenda').classList.remove('deal_add');
+    setLong(false);
   }
 
   return (

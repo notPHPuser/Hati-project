@@ -151,3 +151,14 @@
   top: 0px;
   left: 350px;
 }
+
+.rooms-arenda {
+  width: 70px;
+  transition: 0.2s ease;
+  position: relative;
+  top: 5px;
+}
+
+.rooms-arenda:hover {
+  color: var(--main-hover);
+}

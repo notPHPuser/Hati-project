@@ -55,7 +55,7 @@ function CreateMyself() {
     <>
       <Header />
       <div className='create_myself_page'>
-        <p className='create_myself_page_p'>Самостоятельное создание анкеты</p>
+        <p className='create_myself_page_p'>Самостоятельное создание объявления </p>
         <div className='if_create_myself'>
           <form onSubmit={addApart} className='form_for_myself'>
             <p>Выберете функционал</p>

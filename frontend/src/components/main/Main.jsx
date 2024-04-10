@@ -13,17 +13,21 @@ const Main = () => {
 
   function forArenda() {
     setBuy(!buy);
-    document.getElementById('rent-id').style.display = 'none';
-    document.getElementById('forday-id').style.display = 'none';
+    setRent(false);
+    setforday(false);
+    // document.getElementById('arenda-color').classList.add('add_main_choice');
   }
 
   function forRent() {
     setRent(!rent);
-    document.getElementById('arenda-id').style.display = 'none';
+    setBuy(false);
+    setforday(false);
   }
 
   function forForDay() {
     setforday(!forday);
+    setRent(false);
+    setBuy(false);
   }
 
   return (

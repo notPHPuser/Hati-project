@@ -11,14 +11,16 @@ function Buy() {
 
   function hideHati() {
     ChosesetWhereBuy(!ChoseWhereBuy);
+    setrooms(false);
+    document.getElementById('howRooms').classList.add('hide');
     if ((document.getElementById('whereBuy').style.display = 'none')) {
       document.getElementById('arrow').classList.add('arrow-rotate');
     }
-    document.getElementById('howRooms').classList.add('hide');
   }
 
   function hideRooms() {
     setrooms(!howrooms);
+    ChosesetWhereBuy(false);
     document.getElementById('whereBuy').classList.add('hide');
     document.getElementById('howRooms').classList.remove('hide');
     document.getElementById('howRooms').classList.add('showItems');
@@ -26,7 +28,6 @@ function Buy() {
 
   function hidePrice() {
     setPrice(!price);
-    document.getElementById('price').style.display = 'block';
   }
 
   return (

@@ -1,5 +1,8 @@
 .rooms {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 100px;
   width: 250px;
   z-index: 1;
@@ -19,11 +22,10 @@
   border-radius: 7px;
   background-color: inherit;
   border: 1px solid grey;
-  top: 20px;
-  left: 10px;
   cursor: pointer;
 }
 
-.change-rooms-color {
-  background-color: blue;
+.count-rooms:focus {
+  background-color: #e3e3ff;
+  border: 1px solid var(--main-hover);
 }

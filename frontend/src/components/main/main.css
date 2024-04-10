@@ -118,3 +118,16 @@ ul {
 .show-rent-btn {
   display: block;
 }
+
+.add_main_choice {
+  background-color: rgb(232, 232, 232);
+  color: black;
+}
+/* .link:hover {
+  background-color: white;
+  color: black;
+}
+
+.choice:hover {
+  background-color: white;
+} */
