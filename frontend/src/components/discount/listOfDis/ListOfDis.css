@@ -13,6 +13,9 @@
   border: 1px solid grey;
   border-radius: 5px;
   cursor: pointer;
+  &:hover {
+    box-shadow: 0px 3px 5px 1px rgb(207, 207, 207);
+  }
 }
 
 .fresh_img {
@@ -60,4 +63,17 @@
   color: grey;
   left: 20px;
   top: 5px;
+}
+
+.a101_img {
+  position: absolute;
+  width: 65px;
+  left: 220px;
+}
+
+.lsr_img {
+  position: absolute;
+  width: 80px;
+  left: 200px;
+  top: 20px;
 }
