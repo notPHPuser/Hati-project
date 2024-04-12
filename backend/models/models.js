@@ -51,7 +51,7 @@ Apartments.belongsTo(Type);
 Apartments.hasMany(LikedApartments);
 LikedApartments.belongsTo(Apartments);
 
-Apartments.hasMany(ApartmentsInfo);
+Apartments.hasMany(ApartmentsInfo, { as: 'info' });
 ApartmentsInfo.belongsTo(Apartments);
 
 module.exports = {

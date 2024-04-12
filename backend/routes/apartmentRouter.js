@@ -1,9 +1,9 @@
 const Router = require('express');
 const router = new Router();
-const apartmentConroller = require('../controllers/apartmentsController');
+const ApartmentController = require('../controllers/apartmentsController');
 
-router.post('/', apartmentConroller.create);
-router.get('/', apartmentConroller.get);
-router.get('/:id', apartmentConroller.getOne);
+router.post('/', ApartmentController.create);
+router.get('/', ApartmentController.get);
+router.get('/:id', ApartmentController.getOne);
 
 module.exports = router;
