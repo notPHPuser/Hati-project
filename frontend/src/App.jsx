@@ -1,10 +1,10 @@
-import './app.css';
+import './App.css';
 import React from 'react';
 import Header from './components/header/Header';
 import Main from './components/main/Main';
 import Discount from './components/discount/Discount';
 import OftenFind from './components/oftenfind/OftenFind';
-import ListOfFlats from './components/mayBeGood/listOfFlats';
+import ListOfFlats from './components/mayBeGood/ListOfFlats.jsx';
 
 const App = () => {
   return (

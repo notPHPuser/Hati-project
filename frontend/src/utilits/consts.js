@@ -1,0 +1,12 @@
+export const MAIN = '/';
+export const ARENDA = '/arenda';
+export const SELL = '/sell';
+export const LOGRES = '/log-res';
+export const BUYFLAT = '/buyFlat';
+export const BUYROOM = '/buyRoom';
+export const LISTREG = '/listReg';
+export const CREATE = '/create';
+export const PROFILE = '/profile';
+export const CREATEOWN = '/create_own';
+export const ENTER = '/enter';
+export const APARTPAGE = '/apartment';

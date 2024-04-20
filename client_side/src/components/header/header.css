@@ -1,0 +1,308 @@
+:root {
+  --main-hover: rgb(92, 92, 234);
+  --main-font: 18px;
+}
+
+.hati {
+  position: absolute;
+  top: -10px;
+  left: -40px;
+  transition: 0.2s ease;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.hati-name {
+  transition: 0.2s ease;
+  user-select: none;
+}
+
+.hati:hover {
+  color: var(--main-hover);
+}
+
+.list-verx {
+  position: relative;
+  top: 10px;
+  left: 120px;
+}
+
+.menu-list {
+  cursor: pointer;
+  transition: 0.2s ease;
+  text-decoration: none;
+  height: 55px;
+}
+
+#fresh {
+  color: red;
+}
+/* .menu:hover {
+  cursor: pointer;
+} */
+.menu:hover .menu-list {
+  color: rgb(92, 92, 234);
+}
+
+/* .hati {
+  top: -10px;
+  left: -35px;
+} */
+
+.hati-name:hover {
+  color: var(--main-hover);
+}
+
+header {
+  display: flex;
+}
+.menu {
+  position: relative;
+  display: table-cell;
+  height: 55px;
+  vertical-align: middle;
+  margin-left: 10px;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.plus {
+  display: flex;
+  position: relative;
+  left: 500px;
+  top: 25px;
+  padding: 0 10px;
+  background-color: var(--main-hover);
+  color: white;
+  border: 1px solid var(--main-hover);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  transition: 0.2s ease;
+  border-radius: 5px;
+}
+.plus:hover {
+  background-color: rgb(54, 54, 243);
+  border-color: rgb(54, 54, 243);
+}
+.profile-photo {
+  width: 40px;
+}
+.profile-href {
+  position: absolute;
+  left: 1400px;
+  top: 20px;
+}
+.liked-href {
+  position: absolute;
+  left: 1110px;
+  top: 28px;
+}
+.liked-photo {
+  width: 22px;
+}
+
+.bell-href {
+  position: absolute;
+  left: 1070px;
+  top: 28px;
+}
+.bell-photo {
+  width: 22px;
+}
+
+.house-href {
+  position: absolute;
+  left: 1030px;
+  top: 28px;
+}
+.house-photo {
+  width: 22px;
+}
+
+.chat-href {
+  position: absolute;
+  left: 990px;
+  top: 28px;
+}
+.chat-photo {
+  width: 22px;
+}
+
+.glass-href {
+  position: absolute;
+  left: 950px;
+  top: 28px;
+}
+
+.glass-photo {
+  width: 22px;
+}
+
+.profile-info {
+  color: white;
+  position: absolute;
+  left: -27px;
+  top: 50px;
+  width: 100px;
+  background-color: black;
+  text-align: center;
+  opacity: 90%;
+  display: none;
+  border-radius: 10px;
+}
+
+.profile-info-text {
+  font-size: 13px;
+}
+
+.profile-href:hover .profile-info {
+  display: block;
+}
+.liked-info {
+  color: white;
+  position: absolute;
+  left: -37px;
+  top: 40px;
+  width: 100px;
+  background-color: black;
+  text-align: center;
+  opacity: 90%;
+  display: none;
+  border-radius: 10px;
+}
+
+.liked-info-text {
+  font-size: 13px;
+}
+
+.liked-href:hover .liked-info {
+  display: block;
+}
+
+.bell-info {
+  color: white;
+  position: absolute;
+  left: -37px;
+  top: 40px;
+  width: 100px;
+  background-color: black;
+  text-align: center;
+  opacity: 90%;
+  display: none;
+  border-radius: 10px;
+}
+
+.bell-info-text {
+  font-size: 13px;
+}
+
+.bell-href:hover .bell-info {
+  display: block;
+}
+
+.house-info {
+  color: white;
+  position: absolute;
+  left: -52px;
+  top: 40px;
+  width: 130px;
+  background-color: black;
+  text-align: center;
+  opacity: 90%;
+  display: none;
+  border-radius: 10px;
+}
+
+.house-info-text {
+  font-size: 13px;
+}
+
+.house-href:hover .house-info {
+  display: block;
+}
+
+.chat-info {
+  color: white;
+  position: absolute;
+  left: -38px;
+  top: 50px;
+  width: 100px;
+  background-color: black;
+  text-align: center;
+  opacity: 90%;
+  display: none;
+  border-radius: 10px;
+  top: 40px;
+}
+
+.chat-info-text {
+  font-size: 13px;
+}
+
+.chat-href:hover .chat-info {
+  display: block;
+}
+
+.glass-info {
+  color: white;
+  position: absolute;
+  left: -38px;
+  top: 50px;
+  width: 100px;
+  background-color: black;
+  text-align: center;
+  opacity: 90%;
+  display: none;
+  border-radius: 10px;
+  top: 40px;
+}
+
+.glass-info-text {
+  font-size: 13px;
+}
+
+.glass-href:hover .glass-info {
+  display: block;
+}
+
+.ArendaMenu {
+  display: none;
+}
+
+#arenda:hover .ArendaMenu {
+  display: block;
+}
+
+.saleMenu {
+  display: none;
+}
+
+#sale:hover .saleMenu {
+  display: block;
+}
+
+.newBuildingsMenu {
+  display: none;
+}
+
+#newBuildings:hover .newBuildingsMenu {
+  display: block;
+}
+
+.constructionMenu {
+  display: none;
+}
+
+#construction:hover .constructionMenu {
+  display: block;
+}
+
+.commercialMenu {
+  display: none;
+}
+
+#commercial:hover .commercialMenu {
+  display: block;
+}

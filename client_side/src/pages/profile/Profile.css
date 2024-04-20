@@ -1,0 +1,67 @@
+.profile_left {
+  width: 348px;
+  height: 580px;
+  border-right: 1px solid grey;
+  border-top: 0px;
+  border-bottom: 0px;
+  border-left: 0px;
+
+  z-index: -1;
+  position: absolute;
+}
+.profile_name {
+  z-index: -1;
+  margin-bottom: -10px;
+  font-weight: 600;
+  font-size: 17px;
+  position: relative;
+  left: 30px;
+  top: 10px;
+}
+
+.li_name_profile {
+  display: grid;
+  position: absolute;
+  left: 110px;
+}
+
+.ul_profile {
+  position: absolute;
+  top: -15px;
+  left: 70px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid grey;
+  height: 95px;
+  width: 220px;
+}
+
+.ul_possibilities {
+  display: grid;
+  position: absolute;
+  left: 60px;
+  top: 90px;
+}
+
+.li_possibilities {
+  margin-bottom: -5px;
+  padding-left: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  user-select: none;
+  width: 220px;
+  height: 50px;
+  border-radius: 7px;
+}
+
+.li_possibilities:hover {
+  background-color: rgb(243, 242, 242);
+}
+
+.photo_in_profile {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  top: 15px;
+  left: -5px;
+}

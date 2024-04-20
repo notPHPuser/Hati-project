@@ -1,0 +1,84 @@
+:root {
+  --hover-to-choice-menu: rgb(233, 243, 251);
+}
+
+.buy-main-choice {
+  z-index: 1;
+  position: absolute;
+  width: 900px;
+  height: 55px;
+  background-color: white;
+  top: 38px;
+  left: 0px;
+  border-radius: 10px;
+}
+
+.what-we-choice {
+  border-radius: 10px 0px 0px 10px;
+  height: 55px;
+  width: 270px;
+  background-color: white;
+  border: 0.5px solid white;
+}
+
+.what-we-choice:hover {
+  background-color: var(--hover-to-choice-menu);
+}
+
+.how-many-rooms {
+  height: 55px;
+  width: 130px;
+  background-color: white;
+  border-radius: 0px 0px 0px 0px;
+  border: 0.5px solid white;
+}
+
+.how-many-rooms:hover {
+  background-color: var(--hover-to-choice-menu);
+}
+
+.cena-for-hati {
+  height: 55px;
+  width: 130px;
+  background-color: white;
+  border-radius: 0px 0px 0px 0px;
+  border: 0.5px solid white;
+}
+
+.cena-for-hati:hover {
+  background-color: var(--hover-to-choice-menu);
+}
+
+.search-menu {
+  height: 50px;
+  width: 343px;
+  position: relative;
+  left: 20px;
+  border-radius: 10px;
+  border: 0px solid white;
+  outline: none;
+}
+
+.arrow {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid grey;
+  border-right: 2px solid grey;
+  transform: rotate(-45deg);
+  top: 25px;
+  left: 250px;
+  transition: 0.5s ease;
+}
+
+.arrow-rotate {
+  transform: rotate(135deg);
+}
+
+.hide {
+  display: none;
+}
+
+.showItems {
+  display: block;
+}

@@ -1,0 +1,72 @@
+.hidden-commercial {
+  position: absolute;
+  top: 54px;
+  left: -540px;
+  width: 1536.5px;
+  height: 400px;
+  background-color: white;
+  border-top: 0.5px solid grey;
+}
+
+.commercial-col-one {
+  display: grid;
+  position: absolute;
+  left: 400px;
+  top: 45px;
+}
+
+.arenda-choice-list {
+  font-size: 22px;
+}
+
+.arenda-items {
+  font-size: var(--size);
+  transition: 0.2s ease;
+}
+
+.arenda-items:hover {
+  color: var(--main-hover);
+}
+
+.commercial-col-two {
+  display: grid;
+  position: absolute;
+  left: 650px;
+  top: 45px;
+}
+
+.sell-choice-list {
+  font-size: 22px;
+}
+
+.sell-choice-items {
+  font-size: var(--size);
+  transition: 0.2s ease;
+}
+
+.sell-choice-items:hover {
+  color: var(--main-hover);
+}
+
+.commercial-col-three {
+  position: absolute;
+  display: grid;
+  left: 950px;
+  top: 70px;
+}
+
+.some-choice-list {
+  font-size: var(--main-font);
+  font-weight: 900;
+  margin-bottom: 25px;
+  transition: 0.2s ease;
+}
+
+.some-choice-list:hover {
+  color: var(--main-hover);
+}
+
+.bottomMenu-for-comm {
+  position: absolute;
+  left: 350px;
+}

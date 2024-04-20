@@ -7,10 +7,7 @@
 .hidden {
   display: none;
 }
-a {
-  color: black;
-  text-decoration: none;
-}
+
 .photo-main {
   position: relative;
   width: 100%;
@@ -24,6 +21,10 @@ a {
   left: 250px;
   top: 50px;
   font-size: 35px;
+}
+a {
+  color: black;
+  text-decoration: none;
 }
 li {
   display: flex;
