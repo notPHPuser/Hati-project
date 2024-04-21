@@ -11,8 +11,10 @@ import OftenFind from '../oftenfind/OftenFind';
 import ListOfDis from '../discount/listOfDis/ListOfDis';
 import ListOfFlats from '../mayBeGood/ListOfFlats';
 import ApartmentsList from '../apartmentsList/ApartmentsList';
+import { action } from 'mobx';
+import { observableApartmentsStore } from '../../store/ApartmentsStore';
 
-function Main() {
+const Main = action(() => {
   const [buy, setBuy] = useState(false);
   const [rent, setRent] = useState(false);
   const [forday, setforday] = useState(false);
@@ -113,10 +115,11 @@ function Main() {
       <OftenFind />
       <div className='divGood' style={{}}>
         <ListOfFlats />
-        <ApartmentsList />
+
+        <ApartmentsList store={observableApartmentsStore} />
       </div>
     </>
   );
-}
+});
 
 export default Main;

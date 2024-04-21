@@ -1,30 +1,34 @@
 import { $authHost, $host } from '.';
+import { jwtDecode } from 'jwt-decode';
 
 export const registration = async (login, email, password) => {
-  const response = await $host.post('/api/user/registration', {
+  const { data } = await $host.post('/api/user/registration', {
     login,
     email,
     password,
     role: 'USER',
   });
-  return response;
+  localStorage.setItem('token', data.token);
+  return jwtDecode(data.token);
 };
 
 export const login = async (login, email, password) => {
-  const response = await $host.post('/api/user/login', {
+  const { data } = await $host.post('/api/user/login', {
     login,
     email,
     password,
   });
-  return response;
+  localStorage.setItem('token', data.token);
+  return jwtDecode(data.token);
 };
 
 export const check = async () => {
-  const response = await $host.post('/api/user/auth', {
-    // login,
-    // email,
-    // password,
-    // role: 'USER',
-  });
-  return response;
+  // const { data } = await $authHost.get('/api/user/auth', {
+  //   // login,
+  //   // email,
+  //   // password,
+  //   // role: 'USER',
+  // });
+  // localStorage.setItem('token', data.token);
+  // return jwtDecode(data.token);
 };

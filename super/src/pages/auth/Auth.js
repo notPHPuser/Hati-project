@@ -1,26 +1,42 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 // import { NavLink, useLocation } from 'react-router-dom/cjs/react-router-dom.min';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { LOGIN, MAIN, REGISTER } from '../../utilits/consts';
 import './Auth.css';
+import { observer } from 'mobx-react-lite';
+import { Navigate } from 'react-router-dom';
 import { login, registration } from '../../http/userAPI';
+import { action } from 'mobx';
+import { Context } from '../..';
 
-function Auth() {
+const Auth = observer(() => {
+  const navigate = useNavigate();
+  const { user } = useContext(Context);
   const location = useLocation();
   const isRegister = location.pathname === REGISTER;
   const [inlogin, setInLogin] = useState('');
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
+
   const click = async () => {
-    if (isRegister) {
-      const response = await registration(inlogin, email, password);
-      console.log(response);
-    } else {
-      const response = await login(inlogin, email, password);
-      console.log(response);
+    try {
+      let data;
+      if (isRegister) {
+        data = await registration(inlogin, email, password);
+        // console.log(response);
+      } else {
+        data = await login(inlogin, email, password);
+        // console.log(response);
+      }
+      user.setUser(user);
+      user.setIsAuth(true);
+      navigate(<MAIN />);
+    } catch (e) {
+      alert(e.response.data.massage('Неверно'));
     }
   };
-  console.log(location);
+
+  // console.log(response);
   return (
     <>
       <div className='register'>
@@ -44,7 +60,7 @@ function Auth() {
             </div>
           )}
         </div>
-        <form>
+        <form onSubmit={click}>
           <input
             onChange={(e) => setInLogin(e.target.value)}
             value={inlogin}
@@ -72,7 +88,7 @@ function Auth() {
           />
 
           {isRegister ? (
-            <button onClick={click} className='reg_button' type='submit'>
+            <button className='reg_button' type='submit'>
               Зарегестрироваться
             </button>
           ) : (
@@ -87,6 +103,6 @@ function Auth() {
       </div>
     </>
   );
-}
+});
 
 export default Auth;

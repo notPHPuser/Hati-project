@@ -3,9 +3,10 @@ import { useState } from 'react';
 import './Create.css';
 import Header from '../../components/header/Header';
 import { Context } from '../..';
+import { observer } from 'mobx-react-lite';
 // import axios from 'axios';
 
-function Create() {
+const Create = observer(() => {
   const { apartment } = useContext(Context);
   const [radioSale, setRadioSale] = useState(false);
   function ifRadioSale() {
@@ -85,6 +86,6 @@ function Create() {
       </div>
     </>
   );
-}
+});
 
 export default Create;

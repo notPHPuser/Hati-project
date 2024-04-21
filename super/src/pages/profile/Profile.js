@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Profile.css';
 import svodka from '../../assets/svodka.png';
 import user from '../../assets/user.png';
@@ -7,10 +7,22 @@ import operations from '../../assets/operations.png';
 import bell from '../../assets/bell.png';
 import hidden from '../../assets/hidden_new.png';
 import exit from '../../assets/exit.png';
+import { Context } from '../..';
+import { useNavigate } from 'react-router-dom';
+import Header from '../../components/header/Header';
 
 function Profile() {
+  const { user } = useContext(Context);
+  const navigate = useNavigate();
+
+  const logout = () => {
+    user.setUser({});
+    user.setIsAuth(false);
+  };
+
   return (
     <>
+      <Header />
       <div className='profile_left'>
         <ul className='ul_profile'>
           {/* нужно вставить ссылки на определенного зарегатированного пользователя. пока оставлю так. смотреть в ListReg */}
@@ -46,7 +58,9 @@ function Profile() {
           </li>
           <li className='li_possibilities'>
             <img src={exit} alt='' className='photo_in_profile' />
-            <p>Выйти</p>
+            <p style={{ zIndex: 10 }} onClick={() => logout()}>
+              Выйти
+            </p>
           </li>
         </ul>
       </div>

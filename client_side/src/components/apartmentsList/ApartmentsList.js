@@ -9,7 +9,7 @@ const ApartmentsList = observer(() => {
   return (
     <>
       <ul className='listAp'>
-        {apartment.apartments.map((apartment) => (
+        {apartment.apartment.map((apartment) => (
           <ApartmentsItem key={apartment.id} apartment={apartment} />
         ))}
       </ul>

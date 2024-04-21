@@ -1,17 +1,28 @@
-// import { observer } from 'mobx-react-lite';
-
+import { observer } from 'mobx-react-lite';
 import './ApartmentsTwo.css';
-import React, { useContext } from 'react';
-import { Context } from '../..';
+import React, { useContext, useEffect } from 'react';
 import ApartmentsItem from './ApartmentsItem';
-import { action } from 'mobx';
+import { fetchApartament } from '../../http/apartamentAPI';
 
-const ApartmentsList = action(() => {
-  const { apartment } = useContext(Context);
+const ApartmentsList = observer(({ store }) => {
+  //const { apartment } = useContext(Context);
+
+  useEffect(() => {
+    fetchApartament().then((data) => {
+      if (data.rows) {
+        store.setApartments(data.rows);
+      } else {
+        console.error('Received data is not an array:', data);
+      }
+    });
+  }, []);
+
+  if (!store || !store.apartments) return null;
+
   return (
     <>
-      <ul className='listAp'>
-        {apartment.apartments.map((apartment) => (
+      <ul style={{ cursor: 'pointer' }} className='listAp'>
+        {store.apartments.map((apartment) => (
           <ApartmentsItem key={apartment.id} apartment={apartment} />
         ))}
       </ul>

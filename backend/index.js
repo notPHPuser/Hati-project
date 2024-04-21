@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.resolve(__dirname, 'static')));
+app.use('/public', express.static(path.resolve(__dirname, 'static')));
 app.use(fileupload({}));
 app.use('/api', router);
 //Обработка ошибки
