@@ -11,7 +11,7 @@ import SaleMenu from './hidden-menu/saleMenu/SaleMenu';
 import NewBuildings from './hidden-menu/newBuildings/NewBuildings';
 import Construction from './hidden-menu/construction/Construction';
 import Commercial from './hidden-menu/commercial/Commercial';
-import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
+import { NavLink, useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import { Context } from '../..';
 import { CREATE, MAIN, PROFILE, REGISTER } from '../../utilits/consts';
 import { observable, observe } from 'mobx';
@@ -19,6 +19,11 @@ import { observer } from 'mobx-react-lite';
 
 const Header = observer(() => {
   const { user } = useContext(Context);
+  const history = useHistory();
+
+  const logIn = () => {
+    user.setIsAuth(true);
+  };
   return (
     <>
       <header>
@@ -112,24 +117,21 @@ const Header = observer(() => {
           </div>
         </a>
 
-        <NavLink to={CREATE} className='plus'>
-          +Разместить бесплатно
-        </NavLink>
         {user.isAuth ? (
-          <NavLink className='profile-href' to={PROFILE}>
-            <img className='profile-photo' src={profile} alt='' />
-            <div className='profile-info'>
-              <p className='profile-info-text'>Ваш профиль</p>
-            </div>
-          </NavLink>
+          <div>
+            <a onClick={() => history.push(CREATE)} className='plus'>
+              +Разместить бесплатно
+            </a>
+            <NavLink className='profile-href' to={PROFILE}>
+              <img className='profile-photo' src={profile} alt='' />
+              <div className='profile-info'>
+                <p className='profile-info-text'>Ваш профиль</p>
+              </div>
+            </NavLink>
+          </div>
         ) : (
           <NavLink className='profile-href' to={REGISTER}>
-            <img
-              onClick={() => user.setIsAuth(true)}
-              className='profile-photo'
-              src={profile}
-              alt=''
-            />
+            <img onClick={logIn} className='profile-photo' src={profile} alt='' />
             <div className='profile-info'>
               <p className='profile-info-text'>Войти</p>
             </div>

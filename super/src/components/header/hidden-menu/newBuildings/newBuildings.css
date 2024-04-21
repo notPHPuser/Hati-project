@@ -1,0 +1,64 @@
+.new-menu {
+  left: -320px;
+  top: 54px;
+  position: absolute;
+
+  height: 100px;
+  background-color: white;
+  width: 1545px;
+  height: 400px;
+  border-top: 0.5px solid grey;
+}
+
+.newB-col-one {
+  display: grid;
+  position: absolute;
+  left: 200px;
+  top: 50px;
+}
+
+.choice-newB {
+  font-weight: 900;
+  font-size: var(--main-font);
+  margin-bottom: 30px;
+  transition: 0.2s ease;
+}
+
+.choice-newB:hover {
+  color: var(--main-hover);
+}
+
+.newB-col-two {
+  position: absolute;
+  left: 690px;
+  top: 50px;
+}
+
+.book-for-newB {
+  width: 35px;
+}
+
+.how-to-sail-for-newB {
+  position: absolute;
+  left: 40px;
+  top: -20px;
+  font-size: 22px;
+  font-weight: 900;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.how-to-sail-for-newB:hover {
+  color: var(--main-hover);
+}
+.photo3 {
+  position: absolute;
+  left: 1050px;
+  top: 50px;
+  width: 400px;
+}
+
+.bottomMenu-for-newB {
+  position: absolute;
+  left: 330px;
+}

@@ -1,0 +1,75 @@
+.register {
+  /* border: 1px solid black; */
+  left: 500px;
+  top: 80px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  height: 500px;
+  align-items: center;
+  text-align: center;
+  z-index: -1;
+}
+.enter {
+  color: rgb(92, 92, 234);
+}
+
+input {
+  outline: none;
+}
+
+.reg_info {
+  position: relative;
+  left: -135px;
+  top: 20px;
+  margin-bottom: 20px;
+  height: 30px;
+  border-bottom: 1px solid black;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  width: 350px;
+  background-color: inherit;
+}
+
+.reg-text {
+  position: relative;
+  top: -150px;
+  left: 180px;
+}
+.reg_button {
+  position: relative;
+  background-color: rgb(92, 92, 234);
+  width: 140px;
+  height: 40px;
+  border-radius: 5px;
+  transition: 0.2s ease;
+  top: 30px;
+  left: -140px;
+  cursor: pointer;
+}
+
+.reg_button:hover {
+  background-color: rgb(54, 54, 243);
+}
+
+button,
+button:active,
+button:focus {
+  border: none;
+}
+
+.link_to_hati {
+  width: 100px;
+  white-space: nowrap;
+  color: rgb(92, 92, 234);
+  position: absolute;
+  top: 400px;
+  left: 171px;
+  transition: 0.2s ease;
+}
+
+.link_to_hati:hover {
+  color: rgb(54, 54, 243);
+}

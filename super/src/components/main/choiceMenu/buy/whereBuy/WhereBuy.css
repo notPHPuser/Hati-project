@@ -1,0 +1,181 @@
+.where {
+  position: absolute;
+  z-index: 1;
+  height: 270px;
+  width: 300px;
+  top: 100px;
+  left: 0px;
+  background-color: white;
+  color: black;
+  font-weight: 100;
+  font-size: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 0px rgb(198, 198, 198);
+}
+.ForLive {
+  height: 23px;
+  position: relative;
+  border: 1px solid black;
+  border-radius: 5px 0px 0px 5px;
+  top: 15px;
+  left: 20px;
+  cursor: pointer;
+  background-color: inherit;
+  font-size: 13px;
+}
+.ForRent {
+  height: 23px;
+  position: relative;
+  border: 1px solid black;
+  border-radius: 0px 5px 5px 0px;
+  top: 15px;
+  left: 20px;
+  cursor: pointer;
+  background-color: inherit;
+  font-size: 13px;
+}
+.ForRent:focus {
+  border: 1px solid var(--main-hover);
+}
+
+.ForLive:focus {
+  border: 1px solid var(--main-hover);
+}
+
+.changeForLiveAndRent {
+  background-color: #e3e3ff;
+  border: 1px solid var(--main-hover);
+  position: relative;
+
+  /* box-shadow: 0 0 4px rgb(42, 42, 255); */
+}
+
+.line-one {
+  position: absolute;
+
+  width: 270px;
+  border-top: 1px solid rgb(182, 182, 182);
+  top: 55px;
+  left: 10px;
+}
+.choice-what-apart {
+  z-index: 1;
+  position: absolute;
+  top: 170px;
+  left: 17px;
+}
+
+.in-new {
+  position: absolute;
+}
+.in-old {
+  position: absolute;
+  top: 25px;
+}
+
+input[type='checkbox']:checked,
+input[type='checkbox']:not(:checked) {
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+}
+
+.what-in-new {
+  position: absolute;
+  color: black;
+  font-weight: 100;
+  font-size: 14px;
+  white-space: nowrap;
+  left: 25px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.what-in-old {
+  position: absolute;
+  color: black;
+  font-weight: 100;
+  font-size: 14px;
+  white-space: nowrap;
+  left: 25px;
+  top: 26px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.line-two {
+  position: absolute;
+  border-top: 1px solid rgb(182, 182, 182);
+  width: 270px;
+  left: -7px;
+  top: 60px;
+}
+
+.in-room {
+  position: absolute;
+}
+
+.label-room {
+  z-index: 1;
+  position: absolute;
+  top: 245px;
+  left: 17px;
+}
+
+.what-in-room {
+  position: absolute;
+  color: black;
+  font-weight: 100;
+  font-size: 14px;
+  top: 0px;
+  left: 25px;
+  user-select: none;
+}
+
+.line-three {
+  position: absolute;
+  width: 270px;
+  border-top: 1px solid rgb(182, 182, 182);
+  top: 35px;
+  left: -6px;
+}
+
+.label-for-choice-buy {
+  display: grid;
+  position: absolute;
+  top: 100px;
+  z-index: 1;
+}
+
+.what-choice-buy-house {
+  display: grid;
+  white-space: nowrap;
+  position: absolute;
+  left: 25px;
+  font-weight: 100;
+  font-size: 14px;
+  color: black;
+  user-select: none;
+}
+.choice-home-buy-house {
+  position: absolute;
+  top: 200px;
+  left: 17px;
+}
+
+.choice-home-buy-part-house {
+  position: absolute;
+  z-index: 1;
+  top: 325px;
+  left: 17px;
+}
+
+.what-choice-buy-part-house {
+  font-weight: 100;
+  white-space: nowrap;
+  font-size: 14px;
+  top: 2px;
+  position: absolute;
+  user-select: none;
+  color: black;
+}

@@ -5,6 +5,12 @@ import pik from './../../assets/pik.png';
 import Buy from './choiceMenu/buy/Buy';
 import Rent from './choiceMenu/rent/Rent';
 import ForDay from './choiceMenu/forDay/ForDay';
+import Header from '../header/Header';
+import Discount from '../discount/Discount';
+import OftenFind from '../oftenfind/OftenFind';
+import ListOfDis from '../discount/listOfDis/ListOfDis';
+import ListOfFlats from '../mayBeGood/ListOfFlats';
+import ApartmentsList from '../apartmentsList/ApartmentsList';
 
 function Main() {
   const [buy, setBuy] = useState(false);
@@ -32,6 +38,7 @@ function Main() {
 
   return (
     <>
+      <Header />
       <div className='main'>
         <h1 className='skid'>Если недвижимость, то Хаты</h1>
 
@@ -101,6 +108,12 @@ function Main() {
         </a>
 
         <img className='photo-main' src={photo} alt='' />
+      </div>
+      <Discount />
+      <OftenFind />
+      <div className='divGood' style={{}}>
+        <ListOfFlats />
+        <ApartmentsList />
       </div>
     </>
   );
