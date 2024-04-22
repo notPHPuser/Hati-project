@@ -20,7 +20,7 @@ const ApartmentsItem = action(({ apartment }) => {
         <div>
           <img
             style={{ width: 315, height: 310, borderRadius: 10 }}
-            src={`${apiAddress}public/${apartment.img}`}
+            src={`${apiAddress}public/${apartment.id}.png`}
           ></img>
           <p style={{ fontSize: 25, fontWeight: 700, top: -10, position: 'relative' }}>
             {apartment.price} ₽

@@ -18,7 +18,7 @@ function Create() {
         <p className='create_myself_page_p'>Самостоятельное создание объявления </p>
         <div className='if_create_myself'>
           <form className='form_for_myself'>
-            <p>Выберете функционал</p>
+            <p>Выберите функциональность</p>
             <div>
               <input onClick={ifRadioSale} type='radio' name='create_mySelf' />
               <label className='label_create_myself'>Продажа</label>

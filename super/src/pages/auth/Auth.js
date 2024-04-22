@@ -36,6 +36,12 @@ const Auth = observer(() => {
     }
   };
 
+  function tp() {
+    if (true) {
+      navigate(MAIN);
+    }
+  }
+
   // console.log(response);
   return (
     <>
@@ -92,7 +98,7 @@ const Auth = observer(() => {
               Зарегестрироваться
             </button>
           ) : (
-            <button className='reg_button' type='submit'>
+            <button onClick={() => navigate(MAIN)} className='reg_button' type='submit'>
               Войти
             </button>
           )}

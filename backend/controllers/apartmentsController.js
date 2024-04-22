@@ -1,15 +1,32 @@
 const { Apartments, ApartmentsInfo } = require('../models/models');
 const uuid = require('uuid');
 const path = require('path');
+const fs = require('fs');
 
 class ApartmentController {
   async create(req, res) {
-    const { name, price, typeId, info } = req.body;
-    const { img } = req.files;
-    let filename = uuid.v4() + '.png';
-    img.mv(path.resolve(__dirname, '..', 'static', filename));
-    const apartment = await Apartments.create({ name, price, typeId, img: filename });
+    const { name, price, typeId, info, img } = req.body;
+    if (!req.files || !req.files.img) {
+      // return res.status(400).json({ message: 'No image uploaded' });
+    }
 
+    // const img = req.files.img;
+    // let filename = uuid.v4() + '.png';
+    // img.mv(path.resolve(__dirname, '..', 'static', filename));
+
+    const apartment = await Apartments.create({
+      name,
+      price,
+      typeId,
+      img: 'image',
+    });
+
+    const id = apartment.id;
+    let filename = id + '.png';
+    const decoded = Buffer.from(img, 'base64');
+
+    //img.mv(path.resolve(__dirname, '..', 'static', filename));
+    fs.writeFileSync(path.resolve(__dirname, '..', 'static', filename), decoded);
     if (info) {
       info = JSON.parse(info);
       info.forEach((i) =>

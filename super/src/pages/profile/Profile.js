@@ -1,23 +1,26 @@
 import React, { useContext } from 'react';
 import './Profile.css';
 import svodka from '../../assets/svodka.png';
-import user from '../../assets/user.png';
+import userr from '../../assets/user.png';
 import heart from '../../assets/heart.png';
 import operations from '../../assets/operations.png';
 import bell from '../../assets/bell.png';
 import hidden from '../../assets/hidden_new.png';
 import exit from '../../assets/exit.png';
 import { Context } from '../..';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import Header from '../../components/header/Header';
+import { observer } from 'mobx-react-lite';
+import { REGISTER } from '../../utilits/consts';
 
-function Profile() {
+const Profile = observer(() => {
   const { user } = useContext(Context);
   const navigate = useNavigate();
 
   const logout = () => {
     user.setUser({});
     user.setIsAuth(false);
+    console.log('log out');
   };
 
   return (
@@ -37,7 +40,7 @@ function Profile() {
             <p>Сводка</p>
           </li>
           <li className='li_possibilities'>
-            <img src={user} alt='' className='photo_in_profile' />
+            <img src={userr} alt='' className='photo_in_profile' />
             <p>Профиль</p>
           </li>
           <li className='li_possibilities'>
@@ -56,16 +59,14 @@ function Profile() {
             <img src={hidden} alt='' className='photo_in_profile' />
             <p>Скрытые объявления</p>
           </li>
-          <li className='li_possibilities'>
+          <NavLink to={REGISTER} onClick={() => logout()} className='li_possibilities'>
             <img src={exit} alt='' className='photo_in_profile' />
-            <p style={{ zIndex: 10 }} onClick={() => logout()}>
-              Выйти
-            </p>
-          </li>
+            <p style={{ zIndex: 10 }}>Выйти</p>
+          </NavLink>
         </ul>
       </div>
     </>
   );
-}
+});
 
 export default Profile;

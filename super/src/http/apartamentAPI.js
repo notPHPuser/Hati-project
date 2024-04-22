@@ -11,8 +11,8 @@ export const fetchTypes = async () => {
   return data;
 };
 
-export const createApartament = async (apartment) => {
-  const { data } = await $authHost.post('api/apartment', apartment);
+export const createApartament = async (name, price, img) => {
+  const { data } = await $authHost.post('api/apartment/create', { name, price, img });
   return data;
 };
 

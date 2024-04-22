@@ -11,7 +11,7 @@ const fileupload = require('express-fileupload');
 const path = require('path');
 
 const app = express();
-app.use(bodyParser.json());
+app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 app.use(express.json());
