@@ -95,7 +95,7 @@ const Auth = observer(() => {
 
           {isRegister ? (
             <button className='reg_button' type='submit'>
-              Зарегестрироваться
+              Зарегистрироваться
             </button>
           ) : (
             <button onClick={() => navigate(MAIN)} className='reg_button' type='submit'>

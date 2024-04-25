@@ -79,7 +79,7 @@ const Create = observer(() => {
               <label className='label_create_myself'>Продажа</label>
               {radioSale && (
                 <div className='if_radio_sale'>
-                  <p style={{ position: 'absolute', top: -100, left: 200 }}>Название</p>
+                  <p style={{ position: 'absolute', top: -100, left: 250 }}>Название</p>
                   <input
                     value={name}
                     onChange={(e) => {
@@ -88,6 +88,7 @@ const Create = observer(() => {
                     type='text'
                     className='whatName'
                     required
+                    style={{ left: 250 }}
                   ></input>
                   <p>Колличество комнат</p>
                   <input
